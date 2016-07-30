@@ -1,6 +1,6 @@
 #!/bin/bash
 
-netstat -anp | grep 1080 | awk '{print $5}' | awk -F: '{print $1}' | sort -r | uniq -c | grep -v "0.0.0.0" > tmp1
+netstat -anp | grep 10888 | awk '{print $5}' | awk -F: '{print $1}' | sort -r | uniq -c | grep -v "0.0.0.0" > tmp1
 
 while read line
 do

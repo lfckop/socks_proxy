@@ -1,4 +1,4 @@
-ssh -f -n -N -D 0.0.0.0:1080 localhost >& $(pwd)/socks_proxy.log </dev/null 
+ssh -f -n -N -D 0.0.0.0:10888 localhost >& $(pwd)/socks_proxy.log </dev/null 
 
 ng 1080 | awk '{print $5}' | awk -F: '{print $1}' | sort -r | uniq -c 
 
